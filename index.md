@@ -1,7 +1,14 @@
 # personal alpine repository
 
-## packages: rysnc 3.2.3-r5
-changes: added lz4
+## packages: rysnc 3.2.3-r6
+changes:
+- add lz4
+- disable xattr
+- disable acl
+- remove openrc scripts
+- remove logrotate
+- remove default conf
+- remove all subpackages other than -docs
 
 ## setup
 1. Add signing key to apk keys `wget -q https://alpine.mchang.icu/michael@mchang.name.rsa.pub -P /etc/apk/keys/`
