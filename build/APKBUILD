@@ -1,12 +1,12 @@
 # Maintainer: Natanael Copa <ncopa@alpinelinux.org>
 pkgname=rsync
 pkgver=3.2.3
-pkgrel=6
+pkgrel=7
 pkgdesc="A file transfer program to keep remote files in sync"
 url="https://rsync.samba.org/"
 arch="all"
 license="GPL-3.0-or-later"
-makedepends="perl popt-dev zlib-dev zstd-dev lz4-dev"
+makedepends="perl popt-dev zlib-dev zstd-dev lz4-dev xxhash-dev"
 subpackages="$pkgname-doc"
 source="https://download.samba.org/pub/rsync/rsync-$pkgver.tar.gz
 	Fix-regression-with---delay-updates.patch
@@ -42,7 +42,6 @@ build() {
 		--disable-xattr-support \
 		--without-included-popt \
 		--without-included-zlib \
-		--disable-xxhash \
 		--disable-openssl
 		# xxhash and openssl support were implicitly disabled before via automagic
 		# since nobody complained that those features were missing starting with 3.2.x

@@ -1,6 +1,6 @@
 # personal alpine repository
 
-## packages: rysnc 3.2.3-r6
+## packages: rysnc 3.2.3-r7
 changes:
 - add lz4
 - disable xattr
